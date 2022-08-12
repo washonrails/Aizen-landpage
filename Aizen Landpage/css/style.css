@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,100;1,600&display=swap');
+@font-face {
+    font-family: 'Bleach';
+    src: url('../fonts/Bleach.ttf');
+}
+:root {
+    --bg-color: #;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: radial-gradient(#49b8f9 20%, #129ed5);
+    overflow: hidden;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+
+}
+
+.navbar img {
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 8px 30px;
+    font-family: 'Poppins';
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: translateY(0);
+}
+
+.navbar ul li a {
+    color: rgb(44, 111, 143);
+}
+
+.navbar ul li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+    width: 0;
+    height: 2px;
+    animation: load 2s infinite;
+}
+
+@keyframes load {
+    0% {
+      width: 0;
+      background: #0077ff;
+    }
+    100% {
+      width: 70%;
+      background: #5977ff;
+    }
+}
+
+.container {
+   display: flex;
+   width: 100%;
+   min-height: 100%;
+   background-color: yellowgreen;
+}
+
+.sections {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    top: 10%;
+
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 4.5em 1em;
+    padding: 40px;
+    width: 50%;
+    height: 70%;
+    z-index: 2;
+}
+
+.title {
+    font-size: 40pt;
+    font-family: 'Bleach';
+    color: rgb(0, 119, 255);
+    text-transform: uppercase;
+    text-shadow:
+               -1px -1px 0px rgb(67, 172, 189),
+               -1px 1px 0px rgb(145, 193, 255),
+                1px -1px 0px rgb(145, 193, 255),
+                1px 0px 0px rgb(0, 140, 255);
+}
+
+.subtitle {
+    font-size: 30pt;
+    font-family: 'Bleach';
+    color: rgb(167, 188, 255);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    text-shadow:
+               -1px -1px 0px rgb(14, 108, 250),
+               -1px 1px 0px rgb(145, 193, 255),
+                1px -1px 0px rgb(145, 193, 255),
+                1px 0px 0px rgb(58, 166, 255);
+}
+
+#description p {
+    color: rgb(4, 43, 97);
+    font-family: 'Poppins';
+    font-family: 20pt;
+    font-weight: 700;
+    text-align: left;
+}
+
+.sections img {
+    position: absolute;
+    top: -9.5%;
+    z-index: -1;
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.socials a {
+   padding-right: 15px;
+   color:#3b97ff;
+}
